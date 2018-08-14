@@ -923,7 +923,8 @@ svg * {
 --------------------------------------------------------------*/
 #content {
     max-width: 33em;
-    margin: 9rem 0 0 15rem;
+    float: right;
+    margin: 9rem 18% 0 12rem;
     padding: 0 1em;
 }
 
