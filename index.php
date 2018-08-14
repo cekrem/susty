@@ -10,44 +10,49 @@
 get_header();
 ?>
 
-	<div id="primary">
-		<main id="main">
+    <div id="primary">
+        <main id="main">
 
-		<?php
-		if ( have_posts() ) :
+			<?php
+			if ( is_home() ) {
+				get_template_part( 'template-parts/content', 'home' );
+			} else {
+				if ( have_posts() ) :
 
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
+					if ( is_home() && ! is_front_page() ) :
+						?>
+                        <header>
+                            <h1 class="screen-reader-text"><?php single_post_title(); ?></h1>
+                        </header>
+					<?php
+					endif;
 
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-				
-				/*
+					/* Start the Loop */
+					while ( have_posts() ) :
+						the_post();
+
+						/*
 				 * Include the Post-Type-specific template for the content.
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+						get_template_part( 'template-parts/content',
+							get_post_type() );
 
-			endwhile;
+					endwhile;
 
-			the_posts_navigation();
+					the_posts_navigation();
 
-		else:
+				else:
 
-			get_template_part( 'template-parts/content', 'none' );
+					get_template_part( 'template-parts/content', 'none' );
 
-		endif;
-		?>
+				endif;
+			}
+			?>
 
-		</main>
-	</div>
+        </main>
+    </div>
 
 <?php
 get_footer();
