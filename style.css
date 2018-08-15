@@ -865,11 +865,12 @@ header#main-header {
     background: white;
     align-items: center;
     width: 12rem;
-    margin: 0 2rem 0 1rem;
+    margin: 1rem 2rem 0 1rem;
     padding: 1rem 1rem;
     height: auto;
-    border-radius: 0 0 1rem 1rem;
+    /*border-radius: 0 0 1rem 1rem;*/
     text-align: center;
+    border: solid 2px black;
 }
 
 header h1, header p {
