@@ -852,7 +852,6 @@ object {
 --------------------------------------------------------------*/
 #page {
 	display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
 }
@@ -925,7 +924,7 @@ svg * {
 --------------------------------------------------------------*/
 #content {
     max-width: 33em;
-    margin: 9rem auto;
+    margin: 9rem auto 0 auto;
     padding: 0 1em;
 }
 
@@ -990,7 +989,11 @@ footer#colophon {
 /*--------------------------------------------------------------
 ## Mobile
 --------------------------------------------------------------*/
-@media only screen and (max-width:640px) {
+@media only screen and (max-width:540px) {
+    #page {
+        flex-wrap: wrap;
+    }
+
     header#main-header {
         position: static;
         width: 100%;
