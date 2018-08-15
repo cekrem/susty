@@ -851,15 +851,17 @@ object {
 # Site
 --------------------------------------------------------------*/
 #page {
-
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 /*--------------------------------------------------------------
 ## Header
 --------------------------------------------------------------*/
 header#main-header {
-    position: fixed;
-    left: 0;
+    position: sticky;
     top: 0;
     background: white;
     align-items: center;
@@ -923,8 +925,7 @@ svg * {
 --------------------------------------------------------------*/
 #content {
     max-width: 33em;
-    float: right;
-    margin: 9rem 18% 0 12rem;
+    margin: 9rem auto;
     padding: 0 1em;
 }
 
@@ -984,4 +985,22 @@ footer#colophon {
     text-align: center;
     padding: 0 1em;
     font-size: .75em;
+}
+
+/*--------------------------------------------------------------
+## Mobile
+--------------------------------------------------------------*/
+@media only screen and (max-width:640px) {
+    header#main-header {
+        position: static;
+        width: 100%;
+    }
+
+    #content {
+        margin-top: 1rem;
+    }
+
+    .punchline {
+        top: 50%;
+    }
 }
