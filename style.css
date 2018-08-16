@@ -619,6 +619,7 @@ a:hover, a:focus, a:active {
     /*color: midnightblue;*/
     border-bottom-style: solid;
     border-bottom-color: inherit;
+    border-bottom-width: 2px;
 }
 
 a:focus {
@@ -844,7 +845,7 @@ object {
 # Site
 --------------------------------------------------------------*/
 #page {
-	display: flex;
+    display: flex;
     justify-content: center;
     align-items: flex-start;
 }
@@ -990,7 +991,11 @@ body:not(.home) {
 /*--------------------------------------------------------------
 ## Mobile
 --------------------------------------------------------------*/
-@media only screen and (max-width:599px) {
+@media only screen and (max-width: 599px) {
+    body.home {
+        overflow: hidden !important;
+    }
+
     #page {
         flex-wrap: wrap;
     }
@@ -998,7 +1003,7 @@ body:not(.home) {
     header#main-header {
         margin: 0;
         padding: 1rem 0;
-        top: -5rem;
+        top: -4.5rem;
         /*position: static;*/
         width: 100%;
         text-align: center;
