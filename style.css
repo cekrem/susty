@@ -467,15 +467,6 @@ html {
     box-sizing: inherit;
 }
 
-body {
-    background-color: #fffefc;
-}
-
-body:not(.home) {
-    background-image: none !important;
-    background-color: floralwhite !important;
-}
-
 hr {
     background-color: #ccc;
     border: 0;
@@ -970,12 +961,30 @@ article > header > h1, article > header > h2 {
     margin: 0 .5em 0 0;
 }
 
-footer#colophon {
+footer {
     max-width: 69em;
     margin: 3em auto;
     text-align: center;
     padding: 0 1em;
     font-size: .75em;
+}
+
+/*--------------------------------------------------------------
+## Background color animation
+--------------------------------------------------------------*/
+body {
+    background-color: floralwhite;
+    will-change: background-color;
+    transition: background-color 0.2s;
+}
+
+body:not(.loaded) {
+    background-color: floralwhite !important;
+}
+
+body:not(.home) {
+    background-image: none !important;
+    background-color: floralwhite !important;
 }
 
 /*--------------------------------------------------------------
