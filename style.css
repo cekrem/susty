@@ -396,7 +396,8 @@ optgroup,
 textarea {
     color: rgb(4, 4, 2);
     font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Nimbus Sans L", "Liberation Sans", Tahoma, Geneva, sans-serif;;
-    font-size: calc(15px + 4 * (100vw / 1500));
+    /*font-size: calc(15px + 4 * (100vw / 1500));*/
+    font-size: 18px;
     line-height: 1.5;
 }
 
@@ -472,6 +473,7 @@ body {
 
 body:not(.home) {
     background-image: none !important;
+    background-color: floralwhite !important;
 }
 
 hr {
@@ -861,16 +863,16 @@ object {
 --------------------------------------------------------------*/
 header#main-header {
     position: sticky;
-    top: 0;
-    background: white;
+    top: 1rem;
+    /*background: white;*/
     align-items: center;
     width: 12rem;
     margin: 1rem 2rem 0 1rem;
     padding: 1rem 1rem;
     height: auto;
     /*border-radius: 0 0 1rem 1rem;*/
-    text-align: center;
-    border: solid 2px black;
+    /*text-align: center;*/
+    /*border: solid 2px black;*/
 }
 
 header h1, header p {
@@ -895,23 +897,11 @@ header > a > svg {
 }
 
 .logo {
-    flex: 0 0 2.4em;
-    text-align: center;
-    line-height: 0;
-    margin-right: .5em;
+    height: 2.5rem;
+    margin: 0;
 }
 
-.logo img {
-    width: 5rem;
-    margin: 1rem 0;
-}
-
-.logo svg {
-    width: 2.4em;
-    height: 2.4em;
-}
-
-.custom-logo-link:hover {
+.logo a:hover {
     border-bottom: none;
 }
 
@@ -939,7 +929,9 @@ svg * {
     bottom: 0;
     left: 0;
     right: 0;
+    padding: 2rem;
     pointer-events: none;
+    z-index: -1;
 }
 
 .punchline h1 {
@@ -947,7 +939,6 @@ svg * {
 }
 
 article a {
-    background: rgb(252, 248, 243) none repeat scroll 0% 0%;
     border-bottom: 0.1em dotted;
 }
 
@@ -990,14 +981,18 @@ footer#colophon {
 /*--------------------------------------------------------------
 ## Mobile
 --------------------------------------------------------------*/
-@media only screen and (max-width:540px) {
+@media only screen and (max-width:599px) {
     #page {
         flex-wrap: wrap;
     }
 
     header#main-header {
-        position: static;
+        margin: 0;
+        padding: 1rem 0;
+        top: -5rem;
+        /*position: static;*/
         width: 100%;
+        text-align: center;
     }
 
     #content {
@@ -1006,5 +1001,6 @@ footer#colophon {
 
     .punchline {
         top: 50%;
+        padding-bottom: 3rem;
     }
 }
