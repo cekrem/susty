@@ -257,13 +257,13 @@ footer {
         margin: 0;
         padding: 1em 0;
         top: -3.5em;
-        /*position: static;*/
         width: 100%;
         text-align: center;
     }
 
     #content {
         margin: 1em !important;
+        padding: 0;
         position: relative;
     }
 
