@@ -406,6 +406,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p {
+    margin-top: 0;
     margin-bottom: 1.5em;
 }
 
@@ -476,11 +477,12 @@ hr {
 ul {
     list-style: none;
     padding: 0;
+    margin-top: 0.3em;
 }
 
 li {
     font-weight: bold;
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
 ol {
@@ -859,9 +861,8 @@ header#main-header {
     top: 1rem;
     /*background: white;*/
     align-items: center;
-    width: 12rem;
-    margin: 1rem 2rem 0 1rem;
-    padding: 1rem 1rem;
+    /*width: 12rem;*/
+    margin: 1rem 0 0 1rem;
     height: auto;
     /*border-radius: 0 0 1rem 1rem;*/
     /*text-align: center;*/
@@ -870,7 +871,7 @@ header#main-header {
 
 header h1, header p {
     font-size: 1em;
-    line-height: 1em;
+    line-height: 1.5em;
     font-weight: bold;
     flex: 1;
     margin: 0;
@@ -908,8 +909,9 @@ svg * {
 ## Content
 --------------------------------------------------------------*/
 #content {
+    flex: 2;
     max-width: 33em;
-    margin: 9rem auto 0 auto;
+    margin: 6rem auto 0 auto;
     padding: 0 1em;
 }
 
@@ -938,9 +940,11 @@ article a {
 }
 
 article > header > h1, article > header > h2 {
-    font-size: 2.4em;
-    line-height: 1em;
-    margin: 0 0 .4em 0;
+    font-size: 1em;
+}
+
+article > header > h1 {
+    color: #FF4633;
 }
 
 .entry-meta {
@@ -966,30 +970,26 @@ article > header > h1, article > header > h2 {
 }
 
 footer {
-    display:none;
-    max-width: 69em;
-    margin: 3em auto;
-    text-align: center;
-    padding: 0 1em;
-    font-size: .75em;
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    z-index: 99;
+}
+
+.social-navigation img {
+    width: 1rem;
+    height: 1rem;
 }
 
 /*--------------------------------------------------------------
-## Background color animation
+## Backgrounds
 --------------------------------------------------------------*/
-body {
-    background-color: floralwhite;
-    will-change: background-color;
-    transition: background-color 0.2s;
-}
-
-body:not(.loaded) {
-    background-color: floralwhite !important;
-}
-
 body:not(.home) {
-    background-image: none !important;
-    background-color: floralwhite !important;
+    background: white !important;
+}
+
+body.home {
+    background: linear-gradient(#e1422c, #e12d42) !important;
 }
 
 /*--------------------------------------------------------------
@@ -1017,7 +1017,6 @@ body:not(.home) {
 
     #content {
         margin: 1rem !important;
-        flex: 2;
         position: relative;
     }
 
