@@ -19,8 +19,8 @@
 
 <body <?php body_class(); ?>>
 
-<div id="page">
-    <header id="main-header">
+<div id="root">
+    <aside>
         <span class="logo">
 			<?php
 			if ( has_custom_logo() ) :
@@ -32,7 +32,7 @@
 			?>
         </span>
 
-        <nav id="site-navigation" class="main-navigation">
+        <nav>
 			<?php
 			wp_nav_menu( [
 				'theme_location' => 'menu-1',
@@ -40,6 +40,6 @@
 			] );
 			?>
         </nav><!-- #site-navigation -->
-    </header>
+    </aside>
 
-    <div id="content">
+    <main>

@@ -10,8 +10,6 @@
 get_header();
 ?>
 
-	<div id="primary">
-		<main id="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -45,8 +43,6 @@ get_header();
 		endif;
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
 get_footer();
