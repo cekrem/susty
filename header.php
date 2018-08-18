@@ -21,7 +21,7 @@
 
 <div id="page">
     <header id="main-header">
-        <div class="logo">
+        <span class="logo">
 			<?php
 			if ( has_custom_logo() ) :
 				the_custom_logo();
@@ -30,7 +30,7 @@
 					get_stylesheet_directory_uri() );
 			endif;
 			?>
-        </div>
+        </span>
 
         <nav id="site-navigation" class="main-navigation">
 			<?php

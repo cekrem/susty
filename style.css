@@ -854,6 +854,7 @@ object {
 ## Header
 --------------------------------------------------------------*/
 header#main-header {
+    position: -webkit-sticky;
     position: sticky;
     top: 1rem;
     /*background: white;*/
@@ -890,6 +891,7 @@ header > a > svg {
 
 .logo {
     height: 2.5rem;
+    width: 2.4rem;
     margin: 0;
 }
 
@@ -921,13 +923,14 @@ svg * {
     bottom: 0;
     left: 0;
     right: 0;
-    padding: 2rem;
+    margin: 1rem;
     pointer-events: none;
     z-index: -1;
 }
 
-.punchline h1 {
-    margin: 0;
+.punchline img {
+    position: absolute;
+    width: 35rem;
 }
 
 article a {
@@ -963,6 +966,7 @@ article > header > h1, article > header > h2 {
 }
 
 footer {
+    display:none;
     max-width: 69em;
     margin: 3em auto;
     text-align: center;
@@ -997,7 +1001,9 @@ body:not(.home) {
     }
 
     #page {
-        flex-wrap: wrap;
+        flex-direction: column;
+        min-height: 100vh;
+        align-items: stretch;
     }
 
     header#main-header {
@@ -1010,11 +1016,12 @@ body:not(.home) {
     }
 
     #content {
-        margin-top: 1rem;
+        margin: 1rem !important;
+        flex: 2;
+        position: relative;
     }
 
     .punchline {
-        top: 50%;
-        padding-bottom: 3rem;
+
     }
 }
