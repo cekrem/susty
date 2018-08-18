@@ -126,7 +126,7 @@ a:hover, a:active {
 }
 
 /*--------------------------------------------------------------
-## Header
+## Side/top menu
 --------------------------------------------------------------*/
 aside {
     position: -webkit-sticky;
@@ -135,19 +135,7 @@ aside {
     align-items: center;
     margin: 1rem 0 0 1rem;
     height: auto;
-}
-
-header a {
-    border-bottom: unset;
-}
-
-header > a {
     font-weight: bold;
-}
-
-header > a > svg {
-    width: 2rem;
-    height: 2rem;
 }
 
 .logo {
@@ -263,9 +251,5 @@ footer {
         margin: 1rem !important;
         padding: 0;
         position: relative;
-    }
-
-    .punchline {
-
     }
 }
