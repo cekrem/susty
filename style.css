@@ -21,6 +21,11 @@ body.home {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 html{
     color: rgb(4, 4, 2);
     font-family: "Helvetica Neue", Helvetica, Arial, Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "Nimbus Sans L", "Liberation Sans", Tahoma, Geneva, sans-serif;;
@@ -30,7 +35,7 @@ html{
 }
 
 h1, h2, h3, h4, h5, h6 {
-    size: 1em;
+    size: 1rem;
     clear: both;
     font-weight: bold;
 }
