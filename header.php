@@ -12,8 +12,8 @@
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="profile" href="http://gmpg.org/xfn/11">
-
+    
+    get_template_part( 'template-parts/meta', 'none' );
 	<?php wp_head(); ?>
 </head>
 
