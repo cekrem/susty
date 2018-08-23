@@ -8,7 +8,7 @@
 ?>
 
 <!-- Title / Meta-->
-<title>KF Oslo | <?php the_title() ?></title>
+<title>Kristent Fellesskap Oslo | <?php the_title() ?></title>
 <meta name="description" content="<?php the_excerpt() ?>"/>
 
 <!-- Schema.org markup for Google+ -->
@@ -17,7 +17,7 @@
 <meta itemprop="image" content="/punchline.svg">
 
 <!-- Open Graph data -->
-<meta property="og:title" content="KF Oslo | <?php the_title() ?>"/>
+<meta property="og:title" content="Kristent Fellesskap Oslo | <?php the_title() ?>"/>
 <meta property="og:type" content="article"/>
 <meta property="og:url" content="<?php the_permalink() ?>"/>
 <meta property="og:image" content="/punchline.svg"/>

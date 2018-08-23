@@ -12,7 +12,7 @@ $site_desc  = get_bloginfo( 'description' );
 ?>
 
 <!-- Title / Meta-->
-<title><?php echo $site_title ?></title>
+<title>Kristent Fellesskap Oslo | Kjenne Gud, elske mennesker, trene disipler</title>
 <meta name="description" content="<?php echo $site_desc ?>"/>
 
 <!-- Schema.org markup for Google+ -->
